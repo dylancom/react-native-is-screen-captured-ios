@@ -1,6 +1,6 @@
 # react-native-is-screen-captured-ios
 
-Detect if the the system is recording, mirroring, or using AirPlay to stream the contents of the screen
+Detect if the system is recording, mirroring, or using AirPlay to stream the contents of the screen
 
 ## Installation
 
@@ -11,11 +11,9 @@ npm install react-native-is-screen-captured-ios
 ## Usage
 
 ```js
-import IsScreenCapturedIos from "react-native-is-screen-captured-ios";
+import { useIsCaptured } from "react-native-is-screen-captured-ios";
 
-// ...
-
-const result = await IsScreenCapturedIos.multiply(3, 7);
+const isCaptured = useIsCaptured()
 ```
 
 ## Contributing

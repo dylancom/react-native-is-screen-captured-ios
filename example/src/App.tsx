@@ -1,18 +1,16 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import IsScreenCapturedIos from 'react-native-is-screen-captured-ios';
+import { useIsCaptured } from 'react-native-is-screen-captured-ios';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    IsScreenCapturedIos.multiply(3, 7).then(setResult);
-  }, []);
+  const isCaptured = useIsCaptured();
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>
+        Result: {isCaptured ? 'Screen is captured' : 'Screen is not captured'}
+      </Text>
     </View>
   );
 }

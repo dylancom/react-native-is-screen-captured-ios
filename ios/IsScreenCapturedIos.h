@@ -1,5 +1,6 @@
 #import <React/RCTBridgeModule.h>
+#import <React/RCTEventEmitter.h>
 
-@interface IsScreenCapturedIos : NSObject <RCTBridgeModule>
+@interface IsScreenCapturedIos : RCTEventEmitter <RCTBridgeModule>
 
 @end
